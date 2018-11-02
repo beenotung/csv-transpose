@@ -1,0 +1,33 @@
+{
+  "name": "csv-transpose",
+  "description": "Transpose (rotate) data from rows to columns or vice verse in csv",
+  "version": "0.0.0",
+  "main": "index.js",
+  "bin": {
+    "csv-transpose": "./csv-transpose"
+  },
+  "scripts": {
+    "start": "node csv-transpose"
+  },
+  "keywords": [
+    "csv",
+    "transpose",
+    "cli",
+    "cmd",
+    "utils"
+  ],
+  "author": "Beeno Tung",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "csv-parse": "^3.1.3",
+    "csv-stringify": "^4.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/csv-transpose.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beenotung/csv-transpose/issues"
+  },
+  "homepage": "https://github.com/beenotung/csv-transpose#readme"
+}
