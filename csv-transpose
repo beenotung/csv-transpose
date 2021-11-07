@@ -69,7 +69,7 @@ parser.on('end', () => {
       fs.writeFileSync(outFilename, output);
       console.error('saved to', outFilename);
     } else {
-      console.log(output);
+      process.stdout.write(output);
     }
   })
 });
