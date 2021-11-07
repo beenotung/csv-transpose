@@ -66,8 +66,8 @@ parser.on('end', () => {
       return;
     }
     if (outFilename) {
-      fs.writeFileSync('out.csv', output);
-      console.error('saved to out.csv')
+      fs.writeFileSync(outFilename, output);
+      console.error('saved to', outFilename);
     } else {
       console.log(output);
     }
