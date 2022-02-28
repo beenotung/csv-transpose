@@ -14,6 +14,7 @@
   },
   "keywords": [
     "csv",
+    "tsv",
     "transpose",
     "cli",
     "cmd",
