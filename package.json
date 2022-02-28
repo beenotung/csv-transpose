@@ -1,7 +1,7 @@
 {
   "name": "csv-transpose",
   "description": "Transpose (rotate) data from rows to columns or vice verse in csv",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index.js",
   "bin": {
     "csv-transpose": "./csv-transpose",
