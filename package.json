@@ -1,15 +1,15 @@
 {
   "name": "csv-transpose",
   "description": "Transpose (rotate) data from rows to columns or vice verse in csv",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "bin": {
     "csv-transpose": "./csv-transpose",
     "tsv-transpose": "./tsv-transpose"
   },
   "scripts": {
-    "tsc":"tsc -p .",
-    "esbuild":"esbuild --bundle --platform=node dist/core.js --outfile=bundle.js",
+    "tsc": "tsc -p .",
+    "esbuild": "esbuild --bundle --platform=node dist/core.js --outfile=bundle.js",
     "build": "npm run tsc && npm run esbuild"
   },
   "keywords": [
