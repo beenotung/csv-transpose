@@ -9,6 +9,7 @@
     "tsv-transpose": "./tsv-transpose"
   },
   "scripts": {
+    "test": "tsc -p . --noEmit",
     "clean": "rimraf dist",
     "tsc": "tsc -p .",
     "bundle": "esbuild --bundle --platform=node lib/core.ts --outfile=lib/core.js",
