@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('./bundle')(__filename, 'tsv')
+require('./cli/main')(__filename, 'tsv')

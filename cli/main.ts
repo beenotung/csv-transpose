@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import { from_csv, to_csv } from '@beenotung/tslib/csv'
+import { transpose } from '../lib/core'
 
 function main(selfFile: string, ext: string) {
   let separator = ','
@@ -37,18 +37,7 @@ function main(selfFile: string, ext: string) {
     process.exit(1)
   }
 
-  let rows = from_csv(input, separator)
-
-  let maxCol = rows.reduce((acc, cols) => Math.max(acc, cols.length), 0)
-
-  let results: string[][] = []
-  for (let i = 0; i < maxCol; i++) {
-    let result: string[] = []
-    rows.forEach(cols => result.push(cols[i]))
-    results.push(result)
-  }
-
-  let output = to_csv(results, separator)
+  let output = transpose(input, separator)
 
   if (outFilename) {
     fs.writeFileSync(outFilename, output)

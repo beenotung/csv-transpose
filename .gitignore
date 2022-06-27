@@ -5,3 +5,7 @@ pnpm-lock.yaml
 bundle.js
 dist
 *.tgz
+cli/main.js
+cli/main.d.ts
+lib/core.js
+lib/core.d.ts

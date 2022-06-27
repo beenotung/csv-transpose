@@ -5,7 +5,11 @@ Transpose (rotate) data from rows to columns or vice verse in csv/tsv
 
 ## Installation
 ```bash
+# for cli
 npm i -g csv-transpose
+
+# for import usage
+npm i csv-transpose
 ```
 
 Executables:
@@ -27,6 +31,23 @@ csv-transpose -i in.csv -o out.csv
 ### Using pipe
 ```bash
 cat in.csv | csv-transpose > out.csv
+```
+
+### Calling from node.js
+```javascript
+let lib = require('csv-transpose')
+let text = '...some csv text...'
+let separator = ','
+text = lib.transpose(text, separator)
+```
+
+
+### Calling from typescript
+```typescript
+import { transpose } from 'csv-transpose'
+let text = '...some csv text...'
+let separator = ','
+text = lib.transpose(text, separator)
 ```
 
 The file mode and pipe mode can be used in combination.

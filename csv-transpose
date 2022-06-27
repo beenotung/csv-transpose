@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('./bundle')(__filename, 'csv')
+require('./cli/main')(__filename, 'csv')

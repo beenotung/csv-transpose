@@ -2,15 +2,17 @@
   "name": "csv-transpose",
   "description": "Transpose (rotate) data from rows to columns or vice verse in csv",
   "version": "1.1.1",
-  "main": "index.js",
+  "main": "lib/core.js",
+  "types": "lib/core.d.ts",
   "bin": {
     "csv-transpose": "./csv-transpose",
     "tsv-transpose": "./tsv-transpose"
   },
   "scripts": {
+    "clean": "rimraf dist",
     "tsc": "tsc -p .",
-    "esbuild": "esbuild --bundle --platform=node dist/core.js --outfile=bundle.js",
-    "build": "npm run tsc && npm run esbuild"
+    "bundle": "esbuild --bundle --platform=node lib/core.ts --outfile=lib/core.js",
+    "build": "run-s clean tsc bundle"
   },
   "keywords": [
     "csv",
@@ -23,12 +25,17 @@
   "author": "Beeno Tung",
   "license": "BSD-2-Clause",
   "files": [
-    "bundle.js"
+    "./cli/main.js",
+    "./cli/main.d.ts",
+    "./lib/core.js",
+    "./lib/core.d.ts"
   ],
   "devDependencies": {
     "@beenotung/tslib": "^18.0.0",
     "@types/node": "^17.0.21",
     "esbuild": "^0.14.23",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "ts-node": "^10.5.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.5"
